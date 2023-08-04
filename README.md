@@ -11,9 +11,10 @@
   - samtools (1.13)<br>
   - snpeff (4.3)<br><br>
 ### Phylogenetic analysis <br>
+- python (3.10.9)<br>
   - vcf2phylip (2.0)<br>
-  - modeltest-ng (0.1.7)<br>
-  - raxml-ng (1.2.0)<br><br>
+- modeltest-ng (0.1.7)<br>
+ - raxml-ng (1.2.0)<br><br>
 ### Genomic characteristics analysis <br>
   - R () <br>
     - ggplot2
