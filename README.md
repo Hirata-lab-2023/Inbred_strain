@@ -1,7 +1,7 @@
 # **Inbred Strain** 
-# Introduction
+## Introduction
 
-# Dependencies
+## Dependencies
 ### SNPs call　<br>
   - fastq-dump (2.11.3)<br>
   - fastp (0.20.1)<br>
@@ -19,12 +19,12 @@
     - ggplot2
     - 
 
-# Download fastq from SRA
+## Download fastq from SRA
 
 
-# SNPs calls
+## SNPs calls
 
-# Citation
+## Citation
 Ken-ichiro Sadamitsu, Fabien Velilla, Minori Shinya, Makoto Kashima, Yukiko Imai, Toshihiro Kawasaki, Hiromi Hirata and Noriyoshi., "SakaiEstablishment of a zebrafish inbred strain through full sib-pair mating with capable of genetic manipulation in the embryo."  doi: 
 
 
