@@ -1,3 +1,4 @@
+# **Inbred Strain** 
 # Introduction
 
 # Dependencies
@@ -15,11 +16,15 @@
   - raxml-ng (1.2.0)<br><br>
 ### Genomic characteristics analysis <br>
   - R () <br>
-  - R package
+    - ggplot2
+    - 
 
 # Download fastq from SRA
 
 
 # SNPs calls
+
+# Citation
+Ken-ichiro Sadamitsu, Fabien Velilla, Minori Shinya, Makoto Kashima, Yukiko Imai, Toshihiro Kawasaki, Hiromi Hirata and Noriyoshi., "SakaiEstablishment of a zebrafish inbred strain through full sib-pair mating with capable of genetic manipulation in the embryo."  doi: 
 
 
