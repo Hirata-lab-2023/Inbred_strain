@@ -20,10 +20,21 @@
     - ggplot2
     - 
 
-## Download fastq from SRA
+## SNPs call
+`snpscall.sh`completes the process from downloading fastq to SNPs calling. <br>
+***Threading should be adjusted arbitrarily, as processing takes time.***<br>
+```
+bash snpscall.sh
+```
 
+## Phylogenetic analysis 
+After SNPs Calls are completed, perform the following`phy.sh`.
+```
+bash phy.sh
+```
 
-## SNPs calls
+## Genomic characteristics analysis
+
 
 ## Citation
 Ken-ichiro Sadamitsu, Fabien Velilla, Minori Shinya, Makoto Kashima, Yukiko Imai, Toshihiro Kawasaki, Hiromi Hirata and Noriyoshi., "SakaiEstablishment of a zebrafish inbred strain through full sib-pair mating with capable of genetic manipulation in the embryo."  doi: <br>
