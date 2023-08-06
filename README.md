@@ -1,6 +1,6 @@
 # **Inbred Strain** 
 ## Introduction
-
+This report describes the genome sequence results for the IM and M-AB and a comparison of genome sequences between the two inbred lines. The codes and text files used in this analysis are summarized below.
 ## Dependencies
 ### SNPs call　<br>
   - fastq-dump (2.11.3)<br>
@@ -18,8 +18,11 @@
 ### Genomic characteristics analysis <br>
   - R () <br>
     - ggplot2
-    - 
-
+    - openxlsx
+    - patchwork
+    - ggsignif
+    - dplyr
+    - ggbreak
 ## SNPs call
 `snpscall.sh`completes the process from downloading fastq to SNPs calling. <br>
 ***Threading should be adjusted arbitrarily, as processing takes time.***<br>
@@ -34,7 +37,32 @@ bash phy.sh
 ```
 
 ## Genomic characteristics analysis
+After merging the VCF in Phylogenetic analysis (`vcf-merge vcf/fin_vcf/* > vcf/merge/merged.vcf`) and completing the "merged.vcf", the following R can be run to calculate the data needed for the paper.
 
+```
+Rscript　anlysis.R
+```
+
+## Data availability
+### BioProject
+ - PRJNA1002090
+### SRA
+ - M-AB (26th)
+   - M-AB1: SRR25514300
+   - M-AB2: SRR25514299
+   - M-AB3: SRR25514298
+ - IM (47th)
+   - IM1: SRR25514304
+   - IM2: SRR25514303
+   - IM3: SRR25514302
+ - *AB
+   - *AB1: SRR25514325
+   - *AB2: SRR25514324
+   - *AB3: SRR25514323
+ - India
+   - India1: SRR25514329
+   - India2: SRR25514328
+   - India3: SRR25514327
 
 ## Citation
 Ken-ichiro Sadamitsu, Fabien Velilla, Minori Shinya, Makoto Kashima, Yukiko Imai, Toshihiro Kawasaki, Hiromi Hirata and Noriyoshi., "SakaiEstablishment of a zebrafish inbred strain through full sib-pair mating with capable of genetic manipulation in the embryo."  doi: <br>
