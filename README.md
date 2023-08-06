@@ -9,12 +9,12 @@ This report describes the genome sequence results for the IM and M-AB and a comp
   - gatk (4.4.0.0)<br>
   - vcftools (0.1.16)<br>
   - samtools (1.13)<br>
-  - snpeff (4.3)<br><br>
+  - snpeff (4.3)<br>
 ### Phylogenetic analysis <br>
 - python (3.10.9)<br>
   - vcf2phylip (2.0)<br>
 - modeltest-ng (0.1.7)<br>
- - raxml-ng (1.2.0)<br><br>
+ - raxml-ng (1.2.0)<br>
 ### Genomic characteristics analysis <br>
   - R () <br>
     - ggplot2
