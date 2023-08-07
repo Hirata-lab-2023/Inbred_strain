@@ -2,6 +2,8 @@
 ## Introduction
 This report describes the genome sequence results for the IM and M-AB and a comparison of genome sequences between the two inbred lines. The codes and text files used in this analysis are summarized below.
 ## Dependencies
+### Download DNA sequence & GTF<br>
+  - seqkit
 ### SNPs call　<br>
   - fastq-dump (2.11.3)<br>
   - fastp (0.20.1)<br>
@@ -23,6 +25,19 @@ This report describes the genome sequence results for the IM and M-AB and a comp
     - ggsignif
     - dplyr
     - ggbreak
+## Download DNA sequence & GTF 
+Reference data is downloaded by the following command.
+```
+wget https://ftp.ensembl.org/pub/release-110/fasta/danio_rerio/dna/Danio_rerio.GRCz11.dna.primary_assembly.fa.gz
+```
+For fa file as reference, only Chr 1~25 and MT are used.
+```
+for i in `cat chr_mt.txt`
+do
+seqkit grep -p ${i} Danio_rerio.GRCz11.dna.primary_assembly.fa >> Danio_rerio.GRCz11.dna.primary_assembly-only-chr.fa
+done
+```
+
 ## SNPs call
 `snpscall.sh`completes the process from downloading fastq to SNPs calling. <br>
 ***Threading should be adjusted arbitrarily, as processing takes time.***<br>
