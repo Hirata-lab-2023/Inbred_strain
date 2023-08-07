@@ -18,13 +18,17 @@ This report describes the genome sequence results for the IM and M-AB and a comp
 - modeltest-ng (0.1.7)<br>
  - raxml-ng (1.2.0)<br>
 ### Genomic characteristics analysis <br>
-  - R () <br>
-    - ggplot2
-    - openxlsx
-    - patchwork
-    - ggsignif
-    - dplyr
-    - ggbreak
+  - R (4.2.3) <br>
+   - ggplot2
+   - openxlsx
+   - patchwork
+   - ggsignif
+   - dplyr
+   - ggbreak
+   - stringr
+   - UpSetR
+   - reshape2
+   - sets
 ## Download DNA sequence & GTF 
 Reference data is downloaded by the following command.
 ```
@@ -36,6 +40,10 @@ for i in `cat chr_mt.txt`
 do
 seqkit grep -p ${i} Danio_rerio.GRCz11.dna.primary_assembly.fa >> Danio_rerio.GRCz11.dna.primary_assembly-only-chr.fa
 done
+```
+GTF file
+```
+wget https://ftp.ensembl.org/pub/release-109/gff3/danio_rerio/Danio_rerio.GRCz11.109.gff3.gz
 ```
 
 ## SNPs call
