@@ -27,7 +27,7 @@ This report describes the genome sequence results for the IM and M-AB and a comp
    - ggbreak (0.1.1)
    - stringr (1.5.0)
    - UpSetR (1.4.0)
-   - reshape2 ()
+   - reshape2 (1.4.4)
    - sets (1.0-24)
 ## Download DNA sequence & GTF 
 Reference data is downloaded by the following command.
