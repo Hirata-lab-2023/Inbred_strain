@@ -3,7 +3,7 @@
 This report describes the genome sequence results for the IM and M-AB and a comparison of genome sequences between the two inbred lines. The codes and text files used in this analysis are summarized below.
 ## Dependencies
 ### Download DNA sequence & GTF<br>
-  - seqkit
+  - seqkit (2.1.0)
 ### SNPs call　<br>
   - fastq-dump (2.11.3)<br>
   - fastp (0.20.1)<br>
@@ -19,16 +19,16 @@ This report describes the genome sequence results for the IM and M-AB and a comp
  - raxml-ng (1.2.0)<br>
 ### Genomic characteristics analysis <br>
   - R (4.2.3) <br>
-   - ggplot2
-   - openxlsx
-   - patchwork
-   - ggsignif
-   - dplyr
-   - ggbreak
-   - stringr
-   - UpSetR
-   - reshape2
-   - sets
+   - ggplot2 (3.4.2)
+   - openxlsx (4.2.5.2)
+   - patchwork (1.1.2)
+   - ggsignif (0.6.4)
+   - dplyr (1.1.2)
+   - ggbreak (0.1.1)
+   - stringr (1.5.0)
+   - UpSetR (1.4.0)
+   - reshape2 ()
+   - sets (1.0-24)
 ## Download DNA sequence & GTF 
 Reference data is downloaded by the following command.
 ```
