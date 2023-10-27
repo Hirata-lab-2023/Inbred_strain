@@ -32,7 +32,7 @@ This report describes the genome sequence results for the IM and M-AB and a comp
 ## Download DNA sequence & GTF 
 Reference data is downloaded by the following command.
 ```
-wget https://ftp.ensembl.org/pub/release-110/fasta/danio_rerio/dna/Danio_rerio.GRCz11.dna.primary_assembly.fa.gz
+wget https://ftp.ensembl.org/pub/release-101/fasta/danio_rerio/dna/Danio_rerio.GRCz11.dna.primary_assembly.fa.gz
 ```
 For fa file as reference, only Chr 1~25 and MT are used.
 ```
