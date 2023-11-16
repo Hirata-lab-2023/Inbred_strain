@@ -7,7 +7,6 @@ library(ggbreak)
 library(stringr)
 library(UpSetR)
 library(reshape2)
-library(sets)
 
 ########################################################################
 #SNPs_per
@@ -71,7 +70,7 @@ hetero_mean$name = factor(hetero_mean$name,levels = strain)
 hetero_g = ggplot(hetero_mean, aes(x = name, y = mean))+
   geom_bar(stat = "identity", fill ="white", color = "black")+
   geom_errorbar(aes(ymin = mean - se, ymax = mean + se),width = .1)+
-  ggtitle("Homo%SNPs")+
+  ggtitle("Hetero%SNPs")+
   xlab("Labstoks")+
   ylab("Hetero%SNPs")+
   scale_x_discrete(guide = guide_axis(angle = 45)) +
