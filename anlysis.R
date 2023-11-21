@@ -397,34 +397,30 @@ vcf.transcriptID = function(snpeff){
   }))
   return(unique(tmp))
 }
-
-gtf = read.table("genes.gtf",sep = "\t", header = F)
-gene_2 = NULL
-gene = gtf[gtf$V3=="start_codon",]
+gtf = read.table("../snpEff_v4_3t_core/snpEff/data/GRCz11.101/genes.gtf",sep = "\t", header = F)
+gene_all = NULL
+gene = gtf[gtf$V3=="exon",]
 for (i in 1:length(gene$V1)) {
+  gene_4 = NULL
   gene_1 = t(as.data.frame(unlist(strsplit(gene$V9[i], "; "))))
-  gene_1 = t(as.data.frame(unlist(strsplit(gene_1[,6]," "))))
-  gene_1 = gene_1[,2]
-  gene_2 = cbind(gene_2,gene_1) 
+  gene_2 = t(as.data.frame(unlist(strsplit(gene_1[,6]," "))))
+  gene_2 = gene_2[,2]
+  gene_3 = t(as.data.frame(unlist(strsplit(gene_1[,3]," "))))
+  gene_3 = gene_3[,2]
+  gene_4 = cbind(gene_2, gene_3) 
+  gene_all = rbind(gene_all,gene_4)
+  cat(i,"\n")
 }
-a = table(unlist(gene_2))
+
+gene_all = data.frame(gene_all)
+
+gene_all_new = gene_all %>% distinct(gene_2,gene_3, .keep_all = T)
+
+a = table(unlist(gene_all_new[,1]))
 a = as.data.frame(a)
 name = c("Gene_name", "Splicing_variant")
 colnames(a) = name
 Splicing_variant_name = a
-
-gene_2 = NULL
-for (i in 1:length(gene$V3)) {
-  gene_1 = t(as.data.frame(unlist(strsplit(gene$V9[i], "; "))))
-  gene_1 = t(as.data.frame(unlist(strsplit(gene_1[,3]," "))))
-  gene_1 = gene_1[,2]
-  gene_2 = cbind(gene_2,gene_1) 
-}
-a = table(unlist(gene_2))
-a = as.data.frame(a)
-name = c("transcript_id ", "Splicing_variant")
-colnames(a) = name
-Splicing_variant_id = a
 
 #ABM
 ABM_hetero_high = NULL
