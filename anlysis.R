@@ -27,7 +27,7 @@ for (i in 1:14) {
   #hetero
   b = a[grep("0/1",a[,i+9]),]
   hetero_count = c(hetero_count,nrow(b))
-  c = (nrow(b)/1345101833)*100
+  c = (nrow(b)/1345101831)*100
   d = c(as.data.frame(strain_name$strain[i]),c)
   e = as.data.frame(d)
   colnames(e)[1] = "name"
@@ -36,7 +36,7 @@ for (i in 1:14) {
   #homo
   b = a[grep("1/1",a[,i+9]),]
   homo_count = c(homo_count,nrow(b))
-  c = (nrow(b)/1345101833)*100
+  c = (nrow(b)/1345101831)*100
   d = c(as.data.frame(strain_name$strain[i]),c)
   e = as.data.frame(d)
   colnames(e)[1] = "name"
